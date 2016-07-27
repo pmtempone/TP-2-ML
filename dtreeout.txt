@@ -1,0 +1,24 @@
+digraph g {
+graph  [rankdir="TB"]
+node1 [shape="diamond" label ="rf.pred2" style=filled fontcolor= blue  color= black  fontname= Arial  fillcolor= cyan ];
+node2 [shape="diamond" label ="pr.c5.2" style=filled fontcolor= blue  color= black  fontname= Arial  fillcolor= cyan ];
+node3 [shape="box3d" label =" 1" style=filled fontcolor= blue  color= black  fontname= Arial  fillcolor= lightpink ];
+node4 [shape="box3d" label =" 4" style=filled fontcolor= blue  color= black  fontname= Arial  fillcolor= lightpink ];
+node5 [shape="diamond" label ="tres" style=filled fontcolor= blue  color= black  fontname= Arial  fillcolor= cyan ];
+node6 [shape="box3d" label =" 3" style=filled fontcolor= blue  color= black  fontname= Arial  fillcolor= lightpink ];
+node7 [shape="diamond" label ="rf.pred" style=filled fontcolor= blue  color= black  fontname= Arial  fillcolor= cyan ];
+node8 [shape="box3d" label =" 2" style=filled fontcolor= blue  color= black  fontname= Arial  fillcolor= lightpink ];
+node9 [shape="box3d" label =" 1" style=filled fontcolor= blue  color= black  fontname= Arial  fillcolor= lightpink ];
+node10 [shape="box3d" label =" 5" style=filled fontcolor= blue  color= black  fontname= Arial  fillcolor= lightpink ];
+node11 [shape="diamond" label ="***" style=filled fontcolor= blue  color= black  fontname= Arial  fillcolor= cyan ];
+node1 -> node2 [label="in {1,4}" fontname= Arial ];
+node2 -> node3 [label="in {1,2,5}" fontname= Arial ];
+node2 -> node4 [label="in {3,4}" fontname= Arial ];
+node1 -> node5 [label="in {2,3,5}" fontname= Arial ];
+node5 -> node6 [label="> 0" fontname= Arial ];
+node5 -> node7 [label="<= 0" fontname= Arial ];
+node7 -> node8 [label="in {1,2,3}" fontname= Arial ];
+node7 -> node9 [label="= 4" fontname= Arial ];
+node7 -> node10 [label="= 5" fontname= Arial ];
+node1 -> node11 [label="boosting reduced" fontname= Arial ];
+node11 -> NA [label="boosting abandoned" fontname= Arial ]; }
